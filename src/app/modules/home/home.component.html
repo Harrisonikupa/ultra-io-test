@@ -26,11 +26,12 @@
   >
     <div class="giphy-container">
       <div class="header">
-        <app-search></app-search>
+        <app-search (searchQuery)="searchQuery = $event"></app-search>
       </div>
       <div class="body">
         <app-images
           (paginatedData)="data = $event"
+          [searchQuery]="searchQuery"
           [offset]="selectedOffset"
         ></app-images>
       </div>

@@ -3,6 +3,7 @@
     <div class="image-row">
       <div class="image-column" *ngFor="let image of images">
         <img
+          style="border-radius: 5px"
           nz-image
           width="200px"
           height="200px"
@@ -11,11 +12,5 @@
         />
       </div>
     </div>
-
-    <!-- <div class="image-row">
-      <div class="image-column" *ngFor="let image of images">
-        <img [src]="image.images.downsized.url" alt="" />
-      </div>
-    </div> -->
   </div>
 </div>

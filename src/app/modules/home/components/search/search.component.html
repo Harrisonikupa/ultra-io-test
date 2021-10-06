@@ -1,24 +1,34 @@
 <div class="row">
   <div class="col-sm-12">
-    <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton" nzSize="large">
-      <input
-        type="text"
-        nz-input
-        placeholder="Search for a gif"
-        (keyup.enter)="search()"
-        [(ngModel)]="input"
-      />
-    </nz-input-group>
-    <ng-template #suffixIconButton>
-      <button
-        nz-button
-        nzType="primary"
-        (click)="search()"
-        nzSize="large"
-        nzSearch
-      >
-        <i nz-icon nzType="search"></i>
-      </button>
-    </ng-template>
+    <form
+      nz-form
+      [formGroup]="searchForm"
+      class="search-form"
+      (ngSubmit)="search()"
+    >
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input a search parameter">
+          <nz-input-group
+            nzSearch
+            [nzAddOnAfter]="suffixIconButton"
+            nzSize="large"
+          >
+            <input
+              type="text"
+              nz-input
+              placeholder="Search for gif and stickers"
+              (keyup.enter)="search()"
+              (input)="checkWhenEmpty($event)"
+              formControlName="search"
+            />
+          </nz-input-group>
+          <ng-template #suffixIconButton>
+            <button nz-button nzType="primary" nzSize="large" nzSearch>
+              <i nz-icon nzType="search"></i>
+            </button>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
   </div>
 </div>

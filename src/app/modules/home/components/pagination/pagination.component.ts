@@ -6,6 +6,7 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
+import { GiphyService } from '../../services/giphy.service';
 
 @Component({
   selector: 'app-pagination',
@@ -15,8 +16,10 @@ import {
 export class PaginationComponent implements OnInit, DoCheck {
   @Input() paginatedData: any;
   @Output() offset: any = new EventEmitter<any>();
-  currentOffset: any = 0;
 
+  pageIndex: number = 1;
+  contentSize: number = 9;
+  currentOffset: any = 0;
   pagination: any = {};
 
   constructor() {}
@@ -29,6 +32,7 @@ export class PaginationComponent implements OnInit, DoCheck {
     }
   }
 
+  // override when a search has been made
   pageIndexChange(value: number): void {
     const calculatedOffset = (value - 1) * this.pagination?.count;
     this.offset.emit(calculatedOffset);

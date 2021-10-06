@@ -7,6 +7,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzImageModule } from 'ng-zorro-antd/image';
+import { NzFormModule } from 'ng-zorro-antd/form';
 
 @NgModule({
   declarations: [],
@@ -19,6 +20,7 @@ import { NzImageModule } from 'ng-zorro-antd/image';
     NzButtonModule,
     NzPaginationModule,
     NzImageModule,
+    NzFormModule,
   ],
   exports: [
     FormsModule,
@@ -27,6 +29,7 @@ import { NzImageModule } from 'ng-zorro-antd/image';
     NzButtonModule,
     NzPaginationModule,
     NzImageModule,
+    NzFormModule,
   ],
   providers: [GiphyService],
 })

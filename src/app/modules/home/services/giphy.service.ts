@@ -11,6 +11,7 @@ export class GiphyService {
   baseUrl: string = environment.baseUrl;
   apiKey: string = environment.apiKey;
   gifSubject = new BehaviorSubject<any>([]);
+  isSearchingSubject = new BehaviorSubject<any>(false);
 
   constructor(private http: HttpClient) {}
 
@@ -34,6 +35,7 @@ export class GiphyService {
         `${this.baseUrl}search?q=${input}&api_key=${this.apiKey}&limit=${request.limit}&offset=${request.offset}`
       )
       .subscribe((response: any) => {
+        this.isSearchingSubject.next(true);
         if (response?.meta?.status == 200 && response?.data?.length > 0) {
           this.gifSubject.next(response);
         } else {
@@ -44,5 +46,9 @@ export class GiphyService {
 
   getImages(): Observable<any> {
     return this.gifSubject.asObservable();
+  }
+
+  getSearchingStatus(): Observable<any> {
+    return this.isSearchingSubject.asObservable();
   }
 }

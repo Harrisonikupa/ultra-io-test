@@ -8,6 +8,7 @@ import { Component, DoCheck, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   data: any = {};
   selectedOffset: number = 0;
+  searchQuery: string = '';
   constructor() {}
 
   ngOnInit(): void {}
