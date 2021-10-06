@@ -23,10 +23,13 @@ p {
   margin-bottom: $spacing;
 }
 .giphy-container .body {
-  height: 25rem;
+  height: 37rem;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .giphy-container .footer {
-  margin-top: $spacing;
+  margin-top: $spacing + 10px;
 }
 
 .default-background {

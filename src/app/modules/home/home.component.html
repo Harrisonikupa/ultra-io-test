@@ -24,15 +24,21 @@
       default-background
     "
   >
-    <div class="giphy-container container-fluid">
-      <div class="header align-items-start">
+    <div class="giphy-container">
+      <div class="header">
         <app-search></app-search>
       </div>
-      <div class="body align-items-center">
-        <app-images></app-images>
+      <div class="body">
+        <app-images
+          (paginatedData)="data = $event"
+          [offset]="selectedOffset"
+        ></app-images>
       </div>
-      <div class="footer align-items-end">
-        <app-pagination></app-pagination>
+      <div class="footer">
+        <app-pagination
+          [paginatedData]="data"
+          (offset)="selectedOffset = $event"
+        ></app-pagination>
       </div>
     </div>
   </div>

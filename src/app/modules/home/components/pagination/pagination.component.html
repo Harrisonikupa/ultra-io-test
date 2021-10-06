@@ -1,5 +1,10 @@
 <div class="row">
   <div class="col-sm-12 d-flex justify-content-center align-items-center">
-    <nz-pagination [nzPageIndex]="1" [nzTotal]="500"></nz-pagination>
+    <nz-pagination
+      [nzPageIndex]="1"
+      [nzTotal]="pagination.total_count"
+      [nzResponsive]="true"
+      (nzPageIndexChange)="pageIndexChange($event)"
+    ></nz-pagination>
   </div>
 </div>
