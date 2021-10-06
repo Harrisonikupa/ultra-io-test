@@ -1,0 +1,56 @@
+$primary: #896ae2;
+$background: #232026;
+$titleFontSize: 5rem;
+$subtitleFontSize: 2rem;
+$spacing: 10px;
+$textColor: #f7f7fa;
+p {
+  margin-bottom: 0;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.giphy-container {
+  height: 45rem;
+  width: 40rem;
+  background-color: white;
+  padding: $spacing;
+}
+
+.giphy-container .header {
+  margin-bottom: $spacing;
+}
+.giphy-container .body {
+  height: 25rem;
+}
+.giphy-container .footer {
+  margin-top: $spacing;
+}
+
+.default-background {
+  background-color: $background;
+}
+
+.title {
+  color: $textColor;
+
+  text: {
+    align: center;
+  }
+  font: {
+    size: $titleFontSize;
+  }
+}
+
+.subtitle {
+  color: $textColor;
+
+  text: {
+    align: center;
+  }
+  font: {
+    size: $subtitleFontSize;
+  }
+}
