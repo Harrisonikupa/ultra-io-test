@@ -41,8 +41,6 @@ describe('ImagesComponent', () => {
     fixture.detectChanges();
 
     const images = element.queryAll(By.css('.image-column'));
-    console.log(images.length);
-
     expect(images).toBeLessThanOrEqual(9);
     expect(images).toBeGreaterThanOrEqual(0);
   });

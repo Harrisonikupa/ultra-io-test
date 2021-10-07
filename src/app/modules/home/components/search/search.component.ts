@@ -43,9 +43,7 @@ export class SearchComponent implements OnInit {
   }
 
   checkWhenEmpty(value: any) {
-    console.log(value);
     if (value.data == null) {
-      console.log(value.data);
       this.giphyService.isSearchingSubject.next(false);
       this.searchQuery.emit('');
     }
