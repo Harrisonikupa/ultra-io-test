@@ -54,16 +54,6 @@ describe('SearchComponent', () => {
 
   it('should get trending images if search is not empty', fakeAsync(() => {
     let searchField = component.searchForm.controls['search'];
-
-    // component.checkWhenEmpty(searchField);
-
-    // component.search();
-
-    // fixture.detectChanges();
-    // giphyService.getSearchingStatus().subscribe((response: any) => {
-    //   console.log(response);
-    // })
-    // get the api
   }));
 
   it('should get images based on search parameter', () => {
