@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #896ae2;
+$background: #232026;
+$titleFontSize: 5rem;
+$subtitleFontSize: 1.5rem;
+$spacing: 10px;
+$textColor: #f7f7fa;
+
+p {
+  margin-bottom: 0;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.giphy-container {
+  height: auto;
+  width: 40rem;
+  background-color: $background;
+  padding: $spacing;
+  box-shadow: 0px 0px 15px $primary;
+  border-radius: 5px;
+}
+
+.giphy-container .header {
+  margin-bottom: $spacing;
+}
+.giphy-container .body {
+  height: 37rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.giphy-container .footer {
+  margin-top: $spacing + 10px;
+}
+
+.default-background {
+  background-color: $background;
+}
+
+.title {
+  color: $textColor;
+
+  text: {
+    align: center;
+  }
+  font: {
+    size: $titleFontSize;
+  }
+}
+
+.subtitle {
+  color: $textColor;
+
+  text: {
+    align: center;
+  }
+  font: {
+    size: $subtitleFontSize;
+  }
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  // padding: 0 410px;
+}
+
+/* Create four equal columns that sits next to each other */
+.image-column {
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.image- img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.ant-pagination-total-text {
+  color: white;
+}
