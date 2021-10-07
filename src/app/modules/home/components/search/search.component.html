@@ -15,6 +15,7 @@
           >
             <input
               type="text"
+              id="search-box"
               nz-input
               placeholder="Search for gif and stickers"
               (keyup.enter)="search()"
@@ -23,7 +24,13 @@
             />
           </nz-input-group>
           <ng-template #suffixIconButton>
-            <button nz-button nzType="primary" nzSize="large" nzSearch>
+            <button
+              nz-button
+              nzType="primary"
+              nzSize="large"
+              id="search-button"
+              nzSearch
+            >
               <i nz-icon nzType="search"></i>
             </button>
           </ng-template>

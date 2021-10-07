@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchForm = this.fb.group({
-      search: [null, [Validators.required]],
+      search: [null, null],
     });
   }
 
@@ -24,13 +24,13 @@ export class SearchComponent implements OnInit {
       limit: 9,
       offset: 1,
     };
-    this.submitSearchForm();
-    if (this.searchForm.valid) {
-      const searchParameter = this.searchForm.value.search;
-      this.searchQuery.emit(searchParameter);
-      this.giphyService.isSearchingSubject.next(true);
-      // this.giphyService.searchImages(searchParameter, model);
-    }
+    // this.submitSearchForm();
+    // if (this.searchForm.valid) {
+    const searchParameter = this.searchForm.value.search;
+    this.searchQuery.emit(searchParameter);
+    this.giphyService.isSearchingSubject.next(true);
+    // this.giphyService.searchImages(searchParameter, model);
+    // }
   }
 
   submitSearchForm(): void {

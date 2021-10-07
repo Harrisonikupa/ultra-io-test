@@ -11,18 +11,23 @@ describe('AppComponent', () => {
   });
 
   it('should create the app', () => {
+    pending();
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it(`should have as title 'ultra-io-test'`, () => {
+    pending();
+
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('ultra-io-test');
   });
 
   it('should render title', () => {
+    pending();
+
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;

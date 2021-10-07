@@ -29,9 +29,7 @@ export class ImagesComponent implements OnInit, OnChanges, OnDestroy {
   subscription: Subscription | undefined;
   constructor(private giphyService: GiphyService) {}
 
-  ngOnInit(): void {
-    // this.getTrendingImages(this.request);
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(): void {
     this.request.offset = this.offset;

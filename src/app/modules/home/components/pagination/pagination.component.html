@@ -6,6 +6,10 @@
       [nzTotal]="pagination.total_count"
       [nzResponsive]="true"
       (nzPageIndexChange)="pageIndexChange($event)"
+      [nzShowTotal]="rangeTemplate"
     ></nz-pagination>
+    <ng-template #rangeTemplate let-range="range" let-total>
+      {{ range[0] }}-{{ range[1] }} of {{ total }} items
+    </ng-template>
   </div>
 </div>
