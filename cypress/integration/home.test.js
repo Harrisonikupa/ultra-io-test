@@ -11,8 +11,7 @@ describe("home page", () => {
       "@responseData"
     ).as("response");
     cy.visit("/");
-    cy.contains("ULTRA");
-    cy.contains("Assessment");
+    cy.contains("assessment");
     cy.wait("@response");
     cy.get(".image-column").should("have.length", 9);
   });
