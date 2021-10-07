@@ -9,6 +9,7 @@ import { GiphyService } from './giphy.service';
 import { PaginatedRequest } from 'src/app/shared/models/paginated-request.model';
 import { Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { IMAGES } from 'src/app/shared/common/mock-data';
 
 describe('GiphyService', () => {
   let giphyService: GiphyService;
@@ -44,7 +45,7 @@ describe('GiphyService', () => {
     );
 
     expect(request.request.method).toEqual('GET');
-    request.flush({});
+    request.flush(IMAGES);
   });
 
   it('should retrieve gifs and stickers based on search parameters', () => {
@@ -67,7 +68,7 @@ describe('GiphyService', () => {
 
     expect(request.request.method).toEqual('GET');
     // put mock data model later
-    request.flush({});
+    request.flush(IMAGES);
   });
 
   afterEach(() => {

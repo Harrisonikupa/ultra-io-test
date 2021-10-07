@@ -12,7 +12,6 @@ export class SearchComponent implements OnInit {
   @Output() searchQuery: any = new EventEmitter<any>();
   searchForm!: FormGroup;
   constructor(private giphyService: GiphyService, private fb: FormBuilder) {}
-
   ngOnInit(): void {
     this.searchForm = this.fb.group({
       search: [null, [Validators.required]],
@@ -46,6 +45,8 @@ export class SearchComponent implements OnInit {
     if (value.data == null) {
       this.giphyService.isSearchingSubject.next(false);
       this.searchQuery.emit('');
+    } else {
+      this.giphyService.isSearchingSubject.next(true);
     }
   }
 }
